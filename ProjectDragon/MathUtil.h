@@ -5,6 +5,31 @@
 
 namespace PD
 {
+/*
+ * PI
+ */
+constexpr float PI = glm::pi<float>();
+constexpr float TWO_PI = 2.0f * PI;
+constexpr float INV_PI = 1.0f / PI;
+constexpr float INV_TWO_PI = 1.0f / TWO_PI;
+
+/*
+ * Wrap an angle to [-pi, pi]
+ * Angle must be close to [-pi, pi], otherwise the performance will be low
+ */
+inline float WrapAngle(float angle)
+{
+	//    const float invTwoPi = 1.0f / twoPi;
+	//    return angle - twoPi * std::floorf(angle * invTwoPi);
+	while (angle > PI) {
+		angle -= TWO_PI;
+	}
+	while (angle < -PI) {
+		angle += TWO_PI;
+	}
+	return angle;
+}
+
 using Vector2f = glm::vec2;
 using Vector3f = glm::vec3;
 using Quaternion = glm::quat;
