@@ -30,10 +30,26 @@ inline float WrapAngle(float angle)
 	return angle;
 }
 
+/*
+ * degree to radians
+ */
+inline float DegreesToRadians(float degrees)
+{
+    return glm::radians(degrees);
+}
+
 using Vector2f = glm::vec2;
 using Vector3f = glm::vec3;
 using Quaternion = glm::quat;
 using Matrix4x4f = glm::mat4;
+
+/*
+* quaternion to matrix4x4
+*/
+inline Matrix4x4f QuaternionToMatrix(const Quaternion& quaternion)
+{
+    return glm::mat4_cast(quaternion);
+}
 
 inline Matrix4x4f MakeTranslationMatrix(const Vector3f& vec3f)
 {

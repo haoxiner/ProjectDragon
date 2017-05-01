@@ -7,15 +7,65 @@
     <Filter Include="Util">
       <UniqueIdentifier>{3f80a222-79c2-44bd-a409-0821f2dd51aa}</UniqueIdentifier>
     </Filter>
+    <Filter Include="GPUData">
+      <UniqueIdentifier>{33fd2d12-6c8c-4fb1-8d78-07d0b4ec3363}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Platform">
+      <UniqueIdentifier>{741dc509-3442-496e-be5b-28a8eb2d27fb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Rendering">
+      <UniqueIdentifier>{8f6f2695-f687-4930-bbbd-49a794f0f663}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="MathUtil.h">
       <Filter>Util</Filter>
     </ClInclude>
+    <ClInclude Include="Platform.h">
+      <Filter>Platform</Filter>
+    </ClInclude>
+    <ClInclude Include="Model.h">
+      <Filter>GPUData</Filter>
+    </ClInclude>
+    <ClInclude Include="RenderingSystem.h">
+      <Filter>Platform</Filter>
+    </ClInclude>
+    <ClInclude Include="ShaderProgram.h">
+      <Filter>Platform</Filter>
+    </ClInclude>
+    <ClInclude Include="StaticShader.h">
+      <Filter>Platform</Filter>
+    </ClInclude>
+    <ClInclude Include="Camera.h">
+      <Filter>Rendering</Filter>
+    </ClInclude>
+    <ClInclude Include="Input.h">
+      <Filter>Platform</Filter>
+    </ClInclude>
+    <ClInclude Include="PlayerCamera.h">
+      <Filter>Rendering</Filter>
+    </ClInclude>
+    <ClInclude Include="Player.h">
+      <Filter>Rendering</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="ProjectDragon.cpp">
       <Filter>Launcher</Filter>
+    </ClCompile>
+    <ClCompile Include="Model.cpp">
+      <Filter>GPUData</Filter>
+    </ClCompile>
+    <ClCompile Include="ShaderProgram.cpp">
+      <Filter>Platform</Filter>
+    </ClCompile>
+    <ClCompile Include="StaticShader.cpp" />
+    <ClCompile Include="Input.cpp">
+      <Filter>Platform</Filter>
+    </ClCompile>
+    <ClCompile Include="Camera.cpp" />
+    <ClCompile Include="PlayerCamera.cpp">
+      <Filter>Rendering</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
