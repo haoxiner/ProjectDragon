@@ -16,6 +16,9 @@
     <Filter Include="Rendering">
       <UniqueIdentifier>{8f6f2695-f687-4930-bbbd-49a794f0f663}</UniqueIdentifier>
     </Filter>
+    <Filter Include="GamePlay">
+      <UniqueIdentifier>{915918d5-f62a-4680-b7ba-c86e630cae7a}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="MathUtil.h">
@@ -59,13 +62,17 @@
     <ClCompile Include="ShaderProgram.cpp">
       <Filter>Platform</Filter>
     </ClCompile>
-    <ClCompile Include="StaticShader.cpp" />
     <ClCompile Include="Input.cpp">
       <Filter>Platform</Filter>
     </ClCompile>
-    <ClCompile Include="Camera.cpp" />
     <ClCompile Include="PlayerCamera.cpp">
       <Filter>Rendering</Filter>
+    </ClCompile>
+    <ClCompile Include="StaticShader.cpp">
+      <Filter>Platform</Filter>
+    </ClCompile>
+    <ClCompile Include="Camera.cpp">
+      <Filter>GamePlay</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
