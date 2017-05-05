@@ -146,6 +146,8 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClInclude Include="Camera.h" />
+    <ClInclude Include="Dragon.h" />
+    <ClInclude Include="Entity.h" />
     <ClInclude Include="Input.h" />
     <ClInclude Include="MathUtil.h" />
     <ClInclude Include="Model.h" />
@@ -154,7 +156,10 @@
     <ClInclude Include="PlayerCamera.h" />
     <ClInclude Include="RenderingSystem.h" />
     <ClInclude Include="ShaderProgram.h" />
+    <ClInclude Include="SkinnedMeshRenderer.h" />
     <ClInclude Include="StaticShader.h" />
+    <ClInclude Include="System.h" />
+    <ClInclude Include="World.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Camera.cpp" />
@@ -164,6 +169,7 @@
     <ClCompile Include="ProjectDragon.cpp" />
     <ClCompile Include="ShaderProgram.cpp" />
     <ClCompile Include="StaticShader.cpp" />
+    <ClCompile Include="World.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

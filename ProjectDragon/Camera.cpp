@@ -9,5 +9,5 @@ const PD::Matrix4x4f& PD::Camera::GetViewMatrix() const
 {
     Quaternion cameraRotation(0.0f, 0.0f, 0.0f, 0.0f);
     
-    return 
+    return Matrix4x4f();
 }

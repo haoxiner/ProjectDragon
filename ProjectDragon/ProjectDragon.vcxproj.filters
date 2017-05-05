@@ -19,6 +19,9 @@
     <Filter Include="GamePlay">
       <UniqueIdentifier>{915918d5-f62a-4680-b7ba-c86e630cae7a}</UniqueIdentifier>
     </Filter>
+    <Filter Include="GamePlay\RenderingSystem">
+      <UniqueIdentifier>{d4061cc0-1401-453e-a051-cd7ba855864b}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="MathUtil.h">
@@ -29,9 +32,6 @@
     </ClInclude>
     <ClInclude Include="Model.h">
       <Filter>GPUData</Filter>
-    </ClInclude>
-    <ClInclude Include="RenderingSystem.h">
-      <Filter>Platform</Filter>
     </ClInclude>
     <ClInclude Include="ShaderProgram.h">
       <Filter>Platform</Filter>
@@ -50,6 +50,24 @@
     </ClInclude>
     <ClInclude Include="Player.h">
       <Filter>Rendering</Filter>
+    </ClInclude>
+    <ClInclude Include="Entity.h">
+      <Filter>GamePlay</Filter>
+    </ClInclude>
+    <ClInclude Include="System.h">
+      <Filter>GamePlay</Filter>
+    </ClInclude>
+    <ClInclude Include="RenderingSystem.h">
+      <Filter>GamePlay</Filter>
+    </ClInclude>
+    <ClInclude Include="SkinnedMeshRenderer.h">
+      <Filter>GamePlay\RenderingSystem</Filter>
+    </ClInclude>
+    <ClInclude Include="World.h">
+      <Filter>GamePlay</Filter>
+    </ClInclude>
+    <ClInclude Include="Dragon.h">
+      <Filter>GamePlay</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -72,6 +90,9 @@
       <Filter>Platform</Filter>
     </ClCompile>
     <ClCompile Include="Camera.cpp">
+      <Filter>GamePlay</Filter>
+    </ClCompile>
+    <ClCompile Include="World.cpp">
       <Filter>GamePlay</Filter>
     </ClCompile>
   </ItemGroup>
