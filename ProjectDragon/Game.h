@@ -1,13 +1,14 @@
 #pragma once
 #include "Dragon.h"
-#include <vector>
+#include "SkinnedMeshRenderer.h"
+#include <list>
 namespace PD
 {
-class World
+class Game
 {
 public:
     void Update(float deltaTime);
 private:
-    std::vector<Dragon*> dragons_;
+    std::list<Dragon> dragons_;
 };
 }

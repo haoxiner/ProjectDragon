@@ -21,6 +21,13 @@ void PD::Model::Shutdown()
     glDeleteBuffers(static_cast<GLsizei>(vboList_.size()), static_cast<GLuint*>(vboList_.data()));
 }
 
+void PD::Model::Render()
+{
+    glBindVertexArray(vao_);
+    glDrawElements(GL_TRIANGLES, indexCount_, GL_UNSIGNED_INT, (void*)0);
+    glBindVertexArray(0);
+}
+
 GLuint PD::Model::CreateVAO()
 {
     GLuint vao;

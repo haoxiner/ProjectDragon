@@ -57,17 +57,23 @@
     <ClInclude Include="System.h">
       <Filter>GamePlay</Filter>
     </ClInclude>
-    <ClInclude Include="RenderingSystem.h">
-      <Filter>GamePlay</Filter>
-    </ClInclude>
     <ClInclude Include="SkinnedMeshRenderer.h">
       <Filter>GamePlay\RenderingSystem</Filter>
     </ClInclude>
-    <ClInclude Include="World.h">
-      <Filter>GamePlay</Filter>
-    </ClInclude>
     <ClInclude Include="Dragon.h">
       <Filter>GamePlay</Filter>
+    </ClInclude>
+    <ClInclude Include="Game.h">
+      <Filter>GamePlay</Filter>
+    </ClInclude>
+    <ClInclude Include="Display.h">
+      <Filter>Platform</Filter>
+    </ClInclude>
+    <ClInclude Include="RenderingSystem.h">
+      <Filter>GamePlay\RenderingSystem</Filter>
+    </ClInclude>
+    <ClInclude Include="PerformanceTimer.h">
+      <Filter>Platform</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -92,7 +98,19 @@
     <ClCompile Include="Camera.cpp">
       <Filter>GamePlay</Filter>
     </ClCompile>
-    <ClCompile Include="World.cpp">
+    <ClCompile Include="Game.cpp">
+      <Filter>GamePlay</Filter>
+    </ClCompile>
+    <ClCompile Include="Display.cpp">
+      <Filter>Platform</Filter>
+    </ClCompile>
+    <ClCompile Include="PerformanceTimer.cpp">
+      <Filter>Platform</Filter>
+    </ClCompile>
+    <ClCompile Include="RenderingSystem.cpp">
+      <Filter>GamePlay\RenderingSystem</Filter>
+    </ClCompile>
+    <ClCompile Include="System.cpp">
       <Filter>GamePlay</Filter>
     </ClCompile>
   </ItemGroup>

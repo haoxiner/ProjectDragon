@@ -11,6 +11,7 @@ public:
                  std::vector<float>& texCoords,
                  std::vector<int>& indices);
     void Shutdown();
+    void Render();
 protected:
     GLuint CreateVAO();
     void UnbindVAO();

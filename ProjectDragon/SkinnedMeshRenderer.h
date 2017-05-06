@@ -4,6 +4,5 @@ namespace PD
 {
 class SkinnedMeshRenderer : public System
 {
-
 };
 }
