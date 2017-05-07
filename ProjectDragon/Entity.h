@@ -6,6 +6,7 @@ namespace PD
 {
 class Entity
 {
+public:
     Vector3f position_;
     Vector3f rotation_;
     float scale_;

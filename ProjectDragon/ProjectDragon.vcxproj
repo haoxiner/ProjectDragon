@@ -161,7 +161,8 @@
     <ClInclude Include="SkinnedMeshRenderer.h" />
     <ClInclude Include="StaticShader.h" />
     <ClInclude Include="System.h" />
-    <ClInclude Include="Game.h" />
+    <ClInclude Include="Texture.h" />
+    <ClInclude Include="World.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Camera.cpp" />
@@ -175,7 +176,7 @@
     <ClCompile Include="ShaderProgram.cpp" />
     <ClCompile Include="StaticShader.cpp" />
     <ClCompile Include="System.cpp" />
-    <ClCompile Include="Game.cpp" />
+    <ClCompile Include="World.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

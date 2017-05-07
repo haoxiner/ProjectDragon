@@ -4,11 +4,10 @@
 #include <list>
 namespace PD
 {
-class Game
+class World
 {
 public:
     void Update(float deltaTime);
-private:
     std::list<Dragon> dragons_;
 };
 }
