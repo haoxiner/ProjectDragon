@@ -78,6 +78,9 @@
     <ClInclude Include="Texture.h">
       <Filter>GPUData</Filter>
     </ClInclude>
+    <ClInclude Include="Material.h">
+      <Filter>GamePlay\RenderingSystem</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="ProjectDragon.cpp">

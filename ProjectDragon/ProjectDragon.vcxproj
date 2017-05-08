@@ -150,6 +150,7 @@
     <ClInclude Include="Dragon.h" />
     <ClInclude Include="Entity.h" />
     <ClInclude Include="Input.h" />
+    <ClInclude Include="Material.h" />
     <ClInclude Include="MathUtil.h" />
     <ClInclude Include="Model.h" />
     <ClInclude Include="PerformanceTimer.h" />

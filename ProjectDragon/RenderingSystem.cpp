@@ -28,6 +28,10 @@ void PD::RenderingSystem::SetViewport(int x, int y, int width, int height)
     glViewport(x, y, width, height);
 }
 
+void PD::RenderingSystem::SetMaterial(Material* material)
+{
+}
+
 void PD::RenderingSystem::Render(Model* model)
 {
     model->Render();
