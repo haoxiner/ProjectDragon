@@ -1,6 +1,6 @@
 #include "Model.h"
 
-bool PD::Model::Startup(std::vector<float>& positions, std::vector<float>& normals, std::vector<float>& texCoords, std::vector<int>& indices)
+bool PD::Model::Startup(std::vector<float>& positions, std::vector<float>& normals, std::vector<float>& texCoords, std::vector<unsigned short>& indices)
 {
     vao_ = CreateVAO();
     indexCount_ = static_cast<GLsizei>(indices.size());
@@ -15,6 +15,26 @@ bool PD::Model::Startup(std::vector<float>& positions, std::vector<float>& norma
     return true;
 }
 
+bool PD::Model::Startup(std::vector<short>& vertexBuffer, const int numOfElementPerVertex, std::vector<unsigned short>& indices)
+{
+    vao_ = CreateVAO();
+    indexCount_ = static_cast<GLsizei>(indices.size());
+    GLuint vbo;
+    glGenBuffers(1, &vbo);
+    glBindBuffer(GL_ARRAY_BUFFER, vbo);
+    glBufferData(GL_ARRAY_BUFFER, vertexBuffer.size() * sizeof(vertexBuffer[0]), static_cast<void*>(vertexBuffer.data()), GL_STATIC_DRAW);
+    glVertexAttribPointer(0, numOfElementPerVertex, GL_SHORT, GL_FALSE, 0, nullptr);
+    glBindBuffer(GL_ARRAY_BUFFER, 0);
+    vboList_.push_back(vbo);
+    glGenBuffers(1, &vbo);
+    glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, vbo);
+    glBufferData(GL_ELEMENT_ARRAY_BUFFER, indices.size() * sizeof(indices[0]), &indices[0], GL_STATIC_DRAW);
+    vboList_.push_back(vbo);
+    glEnableVertexAttribArray(0);
+    UnbindVAO();
+    return true;
+}
+
 void PD::Model::Shutdown()
 {
     glDeleteVertexArrays(1, &vao_);
@@ -24,7 +44,7 @@ void PD::Model::Shutdown()
 void PD::Model::Render()
 {
     glBindVertexArray(vao_);
-    glDrawElements(GL_TRIANGLES, indexCount_, GL_UNSIGNED_INT, (void*)0);
+    glDrawElements(GL_TRIANGLES, indexCount_, GL_UNSIGNED_SHORT, (void*)0);
     glBindVertexArray(0);
 }
 
@@ -52,11 +72,11 @@ void PD::Model::StoreDataInAttributeList(int attributeLocation, int elementCount
     vboList_.push_back(vbo);
 }
 
-void PD::Model::BindIndicesBuffer(std::vector<int>& indices)
+void PD::Model::BindIndicesBuffer(std::vector<unsigned short>& indices)
 {
     GLuint vbo;
     glGenBuffers(1, &vbo);
     glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, vbo);
-    glBufferData(GL_ELEMENT_ARRAY_BUFFER, indices.size() * sizeof(int), &indices[0], GL_STATIC_DRAW);
+    glBufferData(GL_ELEMENT_ARRAY_BUFFER, indices.size() * sizeof(indices[0]), &indices[0], GL_STATIC_DRAW);
     vboList_.push_back(vbo);
 }

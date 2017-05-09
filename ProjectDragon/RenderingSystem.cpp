@@ -36,9 +36,3 @@ void PD::RenderingSystem::Render(Model* model)
 {
     model->Render();
 }
-
-void PD::RenderingSystem::Render(Entity* entity)
-{
-    auto model = entity->model_;
-    model->Render();
-}
