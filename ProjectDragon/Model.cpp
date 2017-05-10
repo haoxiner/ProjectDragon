@@ -15,7 +15,7 @@ bool PD::Model::Startup(std::vector<float>& positions, std::vector<float>& norma
     return true;
 }
 
-bool PD::Model::Startup(std::vector<short>& vertexBuffer, const int numOfElementPerVertex, std::vector<unsigned short>& indices)
+bool PD::Model::Startup(std::vector<short>& vertexBuffer, std::vector<unsigned short>& indices)
 {
     vao_ = CreateVAO();
     indexCount_ = static_cast<GLsizei>(indices.size());
@@ -23,7 +23,13 @@ bool PD::Model::Startup(std::vector<short>& vertexBuffer, const int numOfElement
     glGenBuffers(1, &vbo);
     glBindBuffer(GL_ARRAY_BUFFER, vbo);
     glBufferData(GL_ARRAY_BUFFER, vertexBuffer.size() * sizeof(vertexBuffer[0]), static_cast<void*>(vertexBuffer.data()), GL_STATIC_DRAW);
-    glVertexAttribPointer(0, numOfElementPerVertex, GL_SHORT, GL_FALSE, 0, nullptr);
+
+    int stride = 16 * sizeof(short);
+    glVertexAttribPointer(0, 4, GL_SHORT, GL_FALSE, stride, 0);
+    glVertexAttribPointer(1, 4, GL_SHORT, GL_TRUE, stride, (void*)(4 * sizeof(short)));
+    glVertexAttribPointer(2, 4, GL_UNSIGNED_SHORT, GL_TRUE, stride, (void*)(8 * sizeof(short)));
+    glVertexAttribPointer(3, 4, GL_UNSIGNED_SHORT, GL_TRUE, stride, (void*)(12 * sizeof(short)));
+
     glBindBuffer(GL_ARRAY_BUFFER, 0);
     vboList_.push_back(vbo);
     glGenBuffers(1, &vbo);

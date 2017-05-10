@@ -12,7 +12,6 @@ public:
                  std::vector<float>& texCoords,
                  std::vector<unsigned short>& indices);
     bool Startup(std::vector<short>& vertexBuffer,
-                 const int numOfElementPerVertex,
                  std::vector<unsigned short>& indices);
     void Shutdown();
     void Render();
