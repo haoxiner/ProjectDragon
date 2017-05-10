@@ -27,7 +27,7 @@ bool PD::Model::Startup(std::vector<short>& vertexBuffer, std::vector<unsigned s
     int stride = 16 * sizeof(short);
     glVertexAttribPointer(0, 4, GL_SHORT, GL_FALSE, stride, 0);
     glVertexAttribPointer(1, 4, GL_SHORT, GL_TRUE, stride, (void*)(4 * sizeof(short)));
-    glVertexAttribPointer(2, 4, GL_UNSIGNED_SHORT, GL_TRUE, stride, (void*)(8 * sizeof(short)));
+    glVertexAttribPointer(2, 4, GL_UNSIGNED_SHORT, GL_FALSE, stride, (void*)(8 * sizeof(short)));
     glVertexAttribPointer(3, 4, GL_UNSIGNED_SHORT, GL_TRUE, stride, (void*)(12 * sizeof(short)));
 
     glBindBuffer(GL_ARRAY_BUFFER, 0);
